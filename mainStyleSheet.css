@@ -1,0 +1,45 @@
+@charset "UTF-8";
+body {
+  background-color: blue;
+}
+
+body h1 {
+  color: yellow;
+}
+
+div p, h2 {
+  width: 50%;
+  height: 20px;
+  border: 1px solid gray;
+  border-radius: 3px;
+  /* un extend es como para reusar propiedades en otros selectores */
+}
+
+div {
+  color: red;
+  font-family: arial;
+  width: 100%;
+  display: flex;
+}
+
+div h3 {
+  width: 75%;
+  /* Puedo hacer operacione matemáticas */
+}
+
+div p {
+  color: green;
+  width: 25%;
+}
+
+p {
+  color: purple;
+  font-size: 30px;
+}
+
+h2 {
+  color: orange;
+  font-size: 60px;
+  /* Mixin es como una función */
+}
+/*# sourceMappingURL=mainStyleSheet.css.map */

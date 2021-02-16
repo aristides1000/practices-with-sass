@@ -1,0 +1,22 @@
+$color-blue: blue;
+$color-yellow: yellow;
+
+body {
+  background-color: $color-blue;
+  h1 {
+    color: $color-yellow;
+  }
+}
+
+@mixin color($color_usage, $font_size) {
+  color: $color_usage;
+  font-size: $font_size;
+}
+
+%create_box {
+  width: 50%;
+  height: 20px;
+  border: 1px solid gray;
+  border-radius: 3px;
+  /* un extend es como para reusar propiedades en otros selectores */
+}

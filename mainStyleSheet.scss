@@ -1,0 +1,33 @@
+@import 'anotherStyle';
+
+$color-violet: violet;
+$color-green: green;
+$color-red: red;
+$times-font: arial;
+
+div {
+  color: $color-red;
+  font-family: $times-font;
+  width: 100%;
+  display: flex;
+  h3 {
+    width: 900px / 1200px * 100%;
+    /* Puedo hacer operacione matemáticas */
+  }
+
+  p {
+    color: $color-green;
+    @extend %create_box;
+    width: 300px / 1200px * 100%;
+  }
+}
+
+p {
+  @include color(purple, 30px);
+}
+
+h2 {
+  @include color(orange, 60px);
+  @extend %create_box;
+  /* Mixin es como una función */
+}
