@@ -1,16 +1,21 @@
 $color-blue: blue;
 $color-yellow: yellow;
+$color-navy: navy;
+$color-naval: $color-navy; /* Se puede asignar una variable dentro de una variable */
 
 body {
-  background-color: $color-blue;
+  background-color: $color-naval;
   h1 {
     color: $color-yellow;
   }
 }
 
-@mixin color($color_usage, $font_size) {
+@mixin color($color_usage, $color_hover, $font_size) {
   color: $color_usage;
   font-size: $font_size;
+  &:hover { /* El &selector ampersand ( ) es una convención de Sass que significa "este elemento". Cuando se compile este código, Sass reemplazará todos los &símbolos con el selector actual, en este caso .clase_del_elemento */
+    color: $color_hover;
+  }
 }
 
 %create_box {

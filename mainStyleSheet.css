@@ -1,6 +1,7 @@
 @charset "UTF-8";
+/* Se puede asignar una variable dentro de una variable */
 body {
-  background-color: blue;
+  background-color: navy;
 }
 
 body h1 {
@@ -15,6 +16,7 @@ div p, h2 {
   /* un extend es como para reusar propiedades en otros selectores */
 }
 
+/* Recordar, ojo, usar @import en lugar de @use ya que @use da error, en cambio @import no da error */
 div {
   color: red;
   font-family: arial;
@@ -30,6 +32,8 @@ div h3 {
 div p {
   color: green;
   width: 25%;
+  /* Se le puede colocar porcentaje como también no hace falta colocarle porcentaje */
+  /* Tambien se puede aplicar la función percentage para colocar directamente el porcentage */
 }
 
 p {
@@ -37,9 +41,19 @@ p {
   font-size: 30px;
 }
 
+p:hover {
+  /* El &selector ampersand ( ) es una convención de Sass que significa "este elemento". Cuando se compile este código, Sass reemplazará todos los &símbolos con el selector actual, en este caso .clase_del_elemento */
+  color: yellow;
+}
+
 h2 {
   color: orange;
   font-size: 60px;
   /* Mixin es como una función */
+}
+
+h2:hover {
+  /* El &selector ampersand ( ) es una convención de Sass que significa "este elemento". Cuando se compile este código, Sass reemplazará todos los &símbolos con el selector actual, en este caso .clase_del_elemento */
+  color: blue;
 }
 /*# sourceMappingURL=mainStyleSheet.css.map */

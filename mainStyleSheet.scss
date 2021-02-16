@@ -1,4 +1,5 @@
 @import 'anotherStyle';
+/* Recordar, ojo, usar @import en lugar de @use ya que @use da error, en cambio @import no da error */
 
 $color-violet: violet;
 $color-green: green;
@@ -18,16 +19,17 @@ div {
   p {
     color: $color-green;
     @extend %create_box;
-    width: 300px / 1200px * 100%;
+    width: percentage(300 / 1200); /* Se le puede colocar porcentaje como también no hace falta colocarle porcentaje */
+    /* Tambien se puede aplicar la función percentage para colocar directamente el porcentage */
   }
 }
 
 p {
-  @include color(purple, 30px);
+  @include color(purple, yellow, 30px);
 }
 
 h2 {
-  @include color(orange, 60px);
+  @include color(orange, blue, 60px);
   @extend %create_box;
   /* Mixin es como una función */
 }
